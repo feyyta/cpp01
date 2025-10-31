@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcastrat <mcastrat@student.42belgium.be>   #+#  +:+       +#+        */
+/*   By: mcastrat <mcastrat@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-10-29 22:54:27 by mcastrat          #+#    #+#             */
-/*   Updated: 2025-10-29 22:54:27 by mcastrat         ###   ########.fr       */
+/*   Created: 2025/10/29 22:54:27 by mcastrat          #+#    #+#             */
+/*   Updated: 2025/10/31 03:29:51 by mcastrat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
