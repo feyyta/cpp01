@@ -49,3 +49,26 @@ ex 00 : stack et heap
   | Membre de classe | Destructeur de la classe   |
   | Tableau          | Fin du scope du tableau    |
   | Programme        | return 0 du main           |
+
+
+ex02 :
+ 1. Création de trois façons d'accéder à une string:
+    - str: la variable string originale
+    - stringPTR: un pointeur vers la string (stocke l'adresse mémoire)
+    - stringREF: une référence à la string (alias de la variable)
+  2. Affichage des adresses mémoire:
+    - &str: adresse de la variable originale
+    - stringPTR: adresse contenue dans le pointeur (devrait pointer vers
+  str)
+    - &stringREF: adresse de la référence (identique à &str)
+  3. Affichage des valeurs:
+    - str: valeur directe
+    - *stringPTR: déréférencement du pointeur
+    - stringREF: valeur via la référence
+
+  Concept clé:
+
+  - Un pointeur stocke une adresse mémoire et nécessite le déréférencement
+  (*) pour accéder à la valeur
+  - Une référence est un alias direct de la variable originale, pas besoin
+  de déréférencement
