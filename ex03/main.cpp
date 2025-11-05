@@ -6,7 +6,7 @@
 /*   By: mcastrat <mcastrat@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 19:05:15 by mcastrat          #+#    #+#             */
-/*   Updated: 2025/11/05 04:17:05 by mcastrat         ###   ########.fr       */
+/*   Updated: 2025/11/05 04:28:47 by mcastrat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 
-int main()
-{
+int main(){
     {
         HumanA defaultHumanA;
         HumanB defaultHumanB;
