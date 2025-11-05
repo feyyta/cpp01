@@ -17,7 +17,7 @@ int main()
 	int n = 6;
 	Zombie *bro;
 
-	bro = zombieHorde(n,"omoe");
+	bro = zombieHorde(n,"jul");
 	if (!bro)
 		return 1;
 	for(int i = 0; i < n; i++){

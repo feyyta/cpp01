@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcastrat <mcastrat@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 22:34:48 by mcastrat          #+#    #+#             */
-/*   Updated: 2025/10/31 03:29:44 by mcastrat         ###   ########.fr       */
+/*   Created: 2025/11/03 19:01:11 by mcastrat          #+#    #+#             */
+/*   Updated: 2025/11/05 04:18:03 by mcastrat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
 
-int main()
-{
-	randomChump("jul");
-	Zombie *bro = newZombie("naps");
-	if (!bro)
-		return 1;
-	bro->announce();
-	delete bro;
-	return 0;
+static Weapon defaultWeapon("def w");
+
+HumanA::HumanA(void) : _name("defaultA"), _weapon(defaultWeapon) {
+}
+
+HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _weapon(weapon) {
+}
+
+HumanA::~HumanA(void){
+}
+
+void HumanA::attack(void) const {
+    std::cout << this->_name << " attacks with " << this->_weapon.getType() << std::endl;
 }

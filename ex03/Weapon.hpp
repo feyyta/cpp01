@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcastrat <mcastrat@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 22:34:48 by mcastrat          #+#    #+#             */
-/*   Updated: 2025/10/31 03:29:44 by mcastrat         ###   ########.fr       */
+/*   Created: 2025/11/03 19:04:54 by mcastrat          #+#    #+#             */
+/*   Updated: 2025/11/03 19:41:18 by mcastrat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
+#include <iostream>
 
-int main()
-{
-	randomChump("jul");
-	Zombie *bro = newZombie("naps");
-	if (!bro)
-		return 1;
-	bro->announce();
-	delete bro;
-	return 0;
-}
+class Weapon {
+    
+    private:
+        std::string _type;
+        
+    public:
+        Weapon(std::string type);
+        ~Weapon(void);
+        std::string getType(void) const;
+        void setType(std::string newtype);
+        
+};
+
+#endif

@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcastrat <mcastrat@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 22:34:48 by mcastrat          #+#    #+#             */
-/*   Updated: 2025/10/31 03:29:44 by mcastrat         ###   ########.fr       */
+/*   Created: 2025/11/03 19:16:45 by mcastrat          #+#    #+#             */
+/*   Updated: 2025/11/03 19:41:09 by mcastrat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-int main()
-{
-	randomChump("jul");
-	Zombie *bro = newZombie("naps");
-	if (!bro)
-		return 1;
-	bro->announce();
-	delete bro;
-	return 0;
+Weapon::Weapon(std::string type) : _type(type) {
+}
+
+Weapon::~Weapon(void){
+}
+
+std::string Weapon::getType(void) const{
+    return(this->_type);
+}
+
+void Weapon::setType(std::string newtype){
+    this->_type = newtype;
 }
