@@ -6,21 +6,20 @@
 /*   By: mcastrat <mcastrat@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 22:34:48 by mcastrat          #+#    #+#             */
-/*   Updated: 2025/10/31 03:26:31 by mcastrat         ###   ########.fr       */
+/*   Updated: 2025/11/11 15:10:10 by mcastrat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
-{
+int main(){
 	int n = 6;
 	Zombie *bro;
 
 	bro = zombieHorde(n,"jul");
 	if (!bro)
 		return 1;
-	for(int i = 0; i < n; i++){
+	for(int i = 0; i < n; i++) {
 		bro[i].announce();
 	}
 	delete[] bro;

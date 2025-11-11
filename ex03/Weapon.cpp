@@ -6,7 +6,7 @@
 /*   By: mcastrat <mcastrat@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 19:16:45 by mcastrat          #+#    #+#             */
-/*   Updated: 2025/11/03 19:41:09 by mcastrat         ###   ########.fr       */
+/*   Updated: 2025/11/11 14:19:21 by mcastrat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Weapon::Weapon(std::string type) : _type(type) {
 Weapon::~Weapon(void){
 }
 
-std::string Weapon::getType(void) const{
+const std::string &Weapon::getType(void) const{
     return(this->_type);
 }
 

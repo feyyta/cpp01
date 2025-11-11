@@ -6,22 +6,20 @@
 /*   By: mcastrat <mcastrat@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 01:55:36 by mcastrat          #+#    #+#             */
-/*   Updated: 2025/11/05 04:13:26 by mcastrat         ###   ########.fr       */
+/*   Updated: 2025/11/11 15:06:31 by mcastrat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Replace.hpp"
 
-Replace::Replace(const std::string &filename) : _filename(filename)
-{
+Replace::Replace(const std::string &filename) : _filename(filename){
 }
 
-Replace::~Replace()
-{
+Replace::~Replace(){
 }
 
-int Replace::readFile(std::string &content)
-{
+int Replace::readFile(std::string &content){
+	
 	std::ifstream infile(_filename.c_str());
 	if (!infile.is_open())
 		return (std::cerr << "Error: cannot open file " << _filename << std::endl, 1);
@@ -32,8 +30,8 @@ int Replace::readFile(std::string &content)
 	return 0;
 }
 
-std::string Replace::replaceAll(const std::string &content, const std::string &s1, const std::string &s2)
-{
+std::string Replace::replaceAll(const std::string &content, const std::string &s1, const std::string &s2){
+	
 	std::string result = content;
 	std::string same = "no change";
 	int pos = 0;
@@ -51,8 +49,8 @@ std::string Replace::replaceAll(const std::string &content, const std::string &s
 	return result;
 }
 
-int Replace::writeFile(const std::string &content)
-{
+int Replace::writeFile(const std::string &content){
+	
 	std::string outfilename = _filename + ".replace";
 	std::ofstream outfile(outfilename.c_str());
 	if (!outfile.is_open())
@@ -63,8 +61,8 @@ int Replace::writeFile(const std::string &content)
 	return 0;
 }
 
-int Replace::replaceInFile(const std::string &s1, const std::string &s2)
-{
+int Replace::replaceInFile(const std::string &s1, const std::string &s2){
+	
 	std::string content;
 	if (readFile(content) != 0)
 		return 1;

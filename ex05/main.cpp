@@ -5,19 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcastrat <mcastrat@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 22:34:48 by mcastrat          #+#    #+#             */
-/*   Updated: 2025/11/11 15:07:37 by mcastrat         ###   ########.fr       */
+/*   Created: 2025/11/11 14:22:54 by mcastrat          #+#    #+#             */
+/*   Updated: 2025/11/11 15:11:23 by mcastrat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Harl.hpp"
 
-int main(){
-	randomChump("jul");
-	Zombie *bro = newZombie("naps");
-	if (!bro)
-		return 1;
-	bro->announce();
-	delete bro;
-	return 0;
+int main(void){
+    
+	Harl harl;
+    std::string level;
+    std::cout << "Enter a level (DEBUG, INFO, WARNING, ERROR) or 'exit' to quit:" << std::endl;
+
+    while (1) {
+        std::cout << "> ";
+        if (!std::getline(std::cin, level))
+            break;
+        if (level == "exit")
+            break;
+        if (level.empty())
+            continue;
+        harl.complain(level);
+        std::cout << std::endl;
+    }
+    return 0;
 }

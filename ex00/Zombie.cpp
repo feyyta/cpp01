@@ -6,7 +6,7 @@
 /*   By: mcastrat <mcastrat@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 22:54:27 by mcastrat          #+#    #+#             */
-/*   Updated: 2025/10/31 03:29:51 by mcastrat         ###   ########.fr       */
+/*   Updated: 2025/11/11 15:09:54 by mcastrat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ void    randomChump(std::string name){
 Zombie* newZombie(std::string name){
 
     Zombie *bro;
-    try{
+    try {
         bro = new Zombie(name);
     }
-    catch(std::bad_alloc& err){
+    catch(std::bad_alloc& err) {
         std::cout << "alloc err: " << err.what() << std::endl;
         return NULL;
     }
